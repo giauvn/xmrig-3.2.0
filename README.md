@@ -1,12 +1,5 @@
 # XMRig
 
-[![Github All Releases](https://img.shields.io/github/downloads/xmrig/xmrig/total.svg)](https://github.com/xmrig/xmrig/releases)
-[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases)
-[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/releases)
-[![GitHub license](https://img.shields.io/github/license/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/network)
-
 XMRig is a high performance RandomX and CryptoNight CPU miner, with official support for Windows.
 
 * This is the **CPU-mining** version, there is also a [NVIDIA GPU version](https://github.com/xmrig/xmrig-nvidia) and [AMD GPU version]( https://github.com/xmrig/xmrig-amd).
@@ -24,7 +17,13 @@ XMRig is a high performance RandomX and CryptoNight CPU miner, with official sup
 * Binary releases: https://github.com/xmrig/xmrig/releases
 * Git tree: https://github.com/xmrig/xmrig.git
   * Clone with `git clone https://github.com/xmrig/xmrig.git` :hammer: [Build instructions](https://github.com/xmrig/xmrig/wiki/Build).
-
+## Build for userland android whit ubuntu
+* `git clone https://github.com/giauvn/xmrig-3.2.0.git`
+* `sudo apt install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev automake libtool autoconf`
+* `cd xmrig-3.2.0`
+* `mkdir build && cd build`
+* `cmake .. -DARM_TARGET=7`
+* `make`
 ## Usage
 The preferred way to configure the miner is the [JSON config file](src/config.json) as it is more flexible and human friendly. The command line interface does not cover all features, such as mining profiles for different algorithms. Important options can be changed during runtime without miner restart by editing the config file or executing API calls.
 
