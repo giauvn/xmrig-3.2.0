@@ -4,8 +4,6 @@ XMRig is a high performance RandomX and CryptoNight CPU miner, with official sup
 
 * This is the **CPU-mining** version, there is also a [NVIDIA GPU version](https://github.com/xmrig/xmrig-nvidia) and [AMD GPU version]( https://github.com/xmrig/xmrig-amd).
 
-<img src="doc/screenshot.png" width="808" >
-
 #### Table of contents
 * [Download](#download)
 * [Usage](#usage)
@@ -17,12 +15,19 @@ XMRig is a high performance RandomX and CryptoNight CPU miner, with official sup
 * Binary releases: https://github.com/xmrig/xmrig/releases
 * Git tree: https://github.com/xmrig/xmrig.git
   * Clone with `git clone https://github.com/xmrig/xmrig.git` :hammer: [Build instructions](https://github.com/xmrig/xmrig/wiki/Build).
-## Build for userland android whit ubuntu
+## Build for userland android whit ubuntu (xmrig-3.2.0)
 * `git clone https://github.com/giauvn/xmrig-3.2.0.git`
 * `sudo apt install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev automake libtool autoconf`
 * `cd xmrig-3.2.0`
 * `mkdir build && cd build`
 * `cmake .. -DARM_TARGET=7`
+* `make`
+## Build for userland android whit ubuntu (XMRigCC 3.4.2)
+* `git clone https://github.com/Bendr0id/xmrigCC.git`
+* `sudo apt install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev automake libtool autoconf`
+* `cd xmrig`
+* `mkdir build && cd build`
+* `cmake ..`
 * `make`
 ## Usage
 The preferred way to configure the miner is the [JSON config file](src/config.json) as it is more flexible and human friendly. The command line interface does not cover all features, such as mining profiles for different algorithms. Important options can be changed during runtime without miner restart by editing the config file or executing API calls.
